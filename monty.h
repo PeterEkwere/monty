@@ -61,6 +61,7 @@ int *ptr;
 
 /** FUNCTIONS **/
 void handle_command(char *command, int line_number);
+int file_function(int argc, FILE *file, int line_number);
 void push(int arguments);
 void fpush(stack_t **head, unsigned int line_number);
 void fpal(stack_t **head, unsigned int line_number);
