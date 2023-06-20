@@ -40,5 +40,13 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/** POINTERS FOR STACK AND QUEUE **/
+stack_t top;
+stack_t front;
+stack_t back;
+
+/** GLOBAL VARIABLE'S **/
+extern instruction_t instruction[];
+
 
 #endif
