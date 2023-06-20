@@ -44,9 +44,9 @@ typedef struct instruction_s
 } instruction_t;
 
 /** POINTERS FOR STACK AND QUEUE **/
-extern stack_t *top;
-extern stack_t *front;
-extern stack_t *back;
+stack_t *top;
+stack_t *front;
+stack_t *back;
 
 
 /** GLOBAL VARIABLE'S **/
@@ -55,14 +55,15 @@ extern char line[MAX_LENGTH];
 extern char command[MAX_LENGTH];
 extern int value;
 extern int line_number;
-
+int *ptr;
 
 
 
 /** FUNCTIONS **/
-void handle_command(char *command, int argument, int line_number);
+void handle_command(char *command, int line_number);
 void push(int arguments);
 void fpush(stack_t **head, unsigned int line_number);
-
+void fpal(stack_t **head, unsigned int line_number);
+void pal(void);
 
 #endif

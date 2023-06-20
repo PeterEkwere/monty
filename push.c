@@ -7,9 +7,12 @@
  */
 void fpush(stack_t **head, unsigned int line_number)
 {
+	int argument;
+	(void) head;
+	(void) line_number;
 
-	int digit = atoi(argument);
-	push(digit);
+	argument = *ptr;
+	push(argument);
 
 }
 /**
@@ -20,22 +23,26 @@ void fpush(stack_t **head, unsigned int line_number)
 void push(int argument)
 {
 	stack_t *new_node = (stack_t *)malloc(sizeof(stack_t));
-	
+
+	new_node->next = NULL;
+	new_node->prev = NULL;
+	new_node->n = argument;
+
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 
-	if (head == NULL)
+	if (top == NULL)
 	{
-		head = new_node;
+		top = new_node;
 	}
 	else
 	{
-		head->prev = new_node;
-		new_node->next = head;
-		head = new_node;
+		top->prev = new_node;
+		new_node->next = top;
+		top = new_node;
 	}
 
 }
