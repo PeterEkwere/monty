@@ -1,6 +1,9 @@
 #ifndef _MONTY_H_
 #define _MONTY_H_
 
+/** MACROS */
+#define MAX_LENGTH 100
+
 /** HEADER FILES **/
 
 #include <stdio.h>
@@ -41,12 +44,25 @@ typedef struct instruction_s
 } instruction_t;
 
 /** POINTERS FOR STACK AND QUEUE **/
-stack_t top;
-stack_t front;
-stack_t back;
+stack_t *top;
+stack_t *front;
+stack_t *back;
+
 
 /** GLOBAL VARIABLE'S **/
 extern instruction_t instruction[];
+extern char line[MAX_LENGTH];
+extern char command[MAX_LENGTH];
+extern int argument;
+extern int line_number;
+
+
+
+
+/** FUNCTIONS **/
+void handle_command(char *command, int argument, int line_number);
+void push(int n);
+
 
 
 #endif
