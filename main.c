@@ -5,17 +5,22 @@
  * @argv: this is an array of pointers to characters
  * Return:0
  */
+/** GLOBAL VARIABLE **/
+
+int argument;
+instruction_t instruction[];
+char line[MAX_LENGTH];
+char command[MAX_LENGTH];
+int value;
+
 int main(int argc, char **argv)
 {
 	FILE *file;
 	char line[MAX_LENGTH];
-	char command[MAX_LENGTH];
-	int argument;
+        char command[MAX_LENGTH];
 	int line_number = 1;
 
 	file = fopen(argv[1], "r");
-
-
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -30,20 +35,16 @@ int main(int argc, char **argv)
 	while(fgets(line, sizeof(line), file))
 	{
 		argument = 0;
-		// Remove the trailing newline character//
+
 		line[strcspn(line, "\n")] = '\0';
 
-		//check if line is empty
 		if (strcmp(line, "") == 0)
 			continue;
 
-		// Parse line
 		sscanf(line, "%s %d", command, &argument);
 
-		// call function_handler
 		handle_command(command, argument, line_number);
 
-		// increment line number by 1
 		line_number += 1;
 	}
 	fclose(file);
