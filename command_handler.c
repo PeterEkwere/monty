@@ -16,6 +16,7 @@ void handle_command(char *command, int line_number)
 	instruction_t instruction[] = {
 		{"push", fpush},
 		{"pall", fpal},
+		{"pint", fpint},
 		{NULL, NULL}
 	};
 

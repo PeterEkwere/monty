@@ -32,11 +32,6 @@ int file_function(int argc, FILE *file, int line_number)
 			token = strtok(NULL, " ");
 			if (token != NULL)
 				*ptr = atoi(token);
-			else
-			{
-				fprintf(stderr, "L<%i>: unknown instruction <opcode>\n", line_number);
-				exit(EXIT_FAILURE);
-			}
 		}
 		handle_command(command, line_number);
 		line_number += 1;
