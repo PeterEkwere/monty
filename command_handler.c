@@ -20,6 +20,7 @@ void handle_command(char *command, int line_number)
 		{"pop", fpop},
 		{"swap", fswap},
 		{"add", fadd},
+		{"nop", fnop},
 		{NULL, NULL}
 	};
 
