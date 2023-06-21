@@ -17,11 +17,6 @@ int file_function(int argc, FILE *file, int line_number)
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	if (file == NULL)
-	{
-		fprintf(stderr, "Error: Can't open file <file>\n");
-		exit(EXIT_FAILURE);
-	}
 	while (fgets(line, sizeof(line), file))
 	{
 		*ptr = 0;
@@ -36,12 +31,12 @@ int file_function(int argc, FILE *file, int line_number)
 			strcpy(command, token);
 			token = strtok(NULL, " ");
 			if (token != NULL)
-			{
 				*ptr = atoi(token);
-			}
 			else
 			{
-				fprintf
+				fprintf(stderr, "L<%i>: unknown instruction <opcode>\n", line_number);
+				exit(EXIT_FAILURE);
+			}
 		}
 		handle_command(command, line_number);
 		line_number += 1;
