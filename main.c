@@ -7,7 +7,6 @@
  */
 int main(int argc, char **argv)
 {
-	FILE *file;
 	int line_num = 1;
 
 	ptr = malloc(sizeof(int));

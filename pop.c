@@ -7,17 +7,19 @@
  */
 void fpop(stack_t **head, unsigned int line_number)
 {
-        (void) head;
-        (void) line_number;
-        if (pop() == -1)
-        {
-                fprintf(stderr, "L<%i>: can't pop an empty stack", line_number);
-                exit(EXIT_FAILURE);
-        }
-
+	(void) head;
+	(void) line_number;
+	if (pop() == -1)
+	{
+		fprintf(stderr, "L<%i>: can't pop an empty stack\n", line_number);
+		fclose(file);
+		free_stack(top);
+		free(ptr);
+		exit(EXIT_FAILURE);
+	}
 }
 /**
- * pint - is a function that prints the
+ * pop - is a function that removes the top data
  * item at the top of the stack
  * Return: void
  */
@@ -25,16 +27,15 @@ int pop(void)
 {
 	stack_t *temp;
 
-        if (top == NULL)
-        {
-                return (-1);
-        }
-        else
-        {
+	if (top == NULL)
+	{
+		return (-1);
+	}
+	else
+	{
 		temp = top;
 		top = top->next;
 		free(temp);
-                
-        }
-        return (0);
+	}
+	return (0);
 }

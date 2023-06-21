@@ -22,6 +22,9 @@ void pal(void)
 
 	if (top == NULL)
 	{
+		fclose(file);
+		free_stack(top);
+		free(ptr)
 		exit(EXIT_FAILURE);
 	}
 	else

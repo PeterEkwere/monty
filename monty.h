@@ -55,6 +55,7 @@ extern char line[MAX_LENGTH];
 extern char command[MAX_LENGTH];
 extern int value;
 extern int line_number;
+FILE *file;
 int *ptr;
 
 

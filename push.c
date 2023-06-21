@@ -31,6 +31,9 @@ void push(int argument)
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
+		fclose(file);
+		free_stack(top);
+		free(ptr);
 		exit(EXIT_FAILURE);
 	}
 
