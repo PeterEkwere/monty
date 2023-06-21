@@ -17,5 +17,7 @@ int main(int argc, char **argv)
 	{
 		fclose(file);
 	}
+	free(ptr);
+	free_stack(top);
 	return (0);
 }

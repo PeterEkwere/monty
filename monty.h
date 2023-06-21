@@ -66,5 +66,6 @@ void push(int arguments);
 void fpush(stack_t **head, unsigned int line_number);
 void fpal(stack_t **head, unsigned int line_number);
 void pal(void);
+void free_stack(stack_t *top);
 
 #endif

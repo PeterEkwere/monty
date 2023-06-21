@@ -39,6 +39,9 @@ int file_function(int argc, FILE *file, int line_number)
 			{
 				*ptr = atoi(token);
 			}
+			else
+			{
+				fprintf
 		}
 		handle_command(command, line_number);
 		line_number += 1;
