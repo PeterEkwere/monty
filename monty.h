@@ -72,5 +72,7 @@ int pint(void);
 void fpint(stack_t **head, unsigned int line_number);
 void fpop(stack_t **head, unsigned int line_number);
 int pop(void);
+void fswap(stack_t **head, unsigned int line_number);
+int swap(void);
 
 #endif
