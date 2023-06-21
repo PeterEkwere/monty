@@ -24,7 +24,7 @@ void pal(void)
 	{
 		fclose(file);
 		free_stack(top);
-		free(ptr)
+		free(ptr);
 		exit(EXIT_FAILURE);
 	}
 	else
