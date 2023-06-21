@@ -69,4 +69,7 @@ void pal(void);
 void free_stack(stack_t *top);
 int pint(void);
 void fpint(stack_t **head, unsigned int line_number);
+void fpop(stack_t **head, unsigned int line_number);
+int pop(void);
+
 #endif
