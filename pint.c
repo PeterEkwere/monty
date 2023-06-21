@@ -11,7 +11,7 @@ void fpint(stack_t **head, unsigned int line_number)
 	(void) line_number;
 	if (pint() == -1)
 	{
-		fprintf(stderr, "L<%i>: can't pint, stack empty\n", line_number);
+		fprintf(stderr, "L%i: can't pint, stack empty\n", line_number);
 		fclose(file);
 		free_stack(top);
 		free(ptr);
