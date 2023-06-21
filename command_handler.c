@@ -19,6 +19,7 @@ void handle_command(char *command, int line_number)
 		{"pint", fpint},
 		{"pop", fpop},
 		{"swap", fswap},
+		{"add", fadd},
 		{NULL, NULL}
 	};
 

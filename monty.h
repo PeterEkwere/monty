@@ -74,5 +74,10 @@ void fpop(stack_t **head, unsigned int line_number);
 int pop(void);
 void fswap(stack_t **head, unsigned int line_number);
 int swap(void);
+void fadd(stack_t **head, unsigned int line_number);
+int add(void);
+
+
+
 
 #endif
