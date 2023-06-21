@@ -11,7 +11,7 @@ void fpop(stack_t **head, unsigned int line_number)
 	(void) line_number;
 	if (pop() == -1)
 	{
-		fprintf(stderr, "L<%i>: can't pop an empty stack\n", line_number);
+		fprintf(stderr, "L%i: can't pop an empty stack\n", line_number);
 		fclose(file);
 		free_stack(top);
 		free(ptr);
@@ -31,11 +31,8 @@ int pop(void)
 	{
 		return (-1);
 	}
-	else
-	{
-		temp = top;
-		top = top->next;
-		free(temp);
-	}
+	temp = top;
+	top = top->next;
+	free(temp);
 	return (0);
 }

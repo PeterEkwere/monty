@@ -1,10 +1,10 @@
 push 1
 push 2
 push 3
-pall
+...
+push 9999
 pop
-pall
 pop
-pall
 pop
-pall
+...
+pop
