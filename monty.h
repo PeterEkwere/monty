@@ -77,6 +77,8 @@ int swap(void);
 void fadd(stack_t **head, unsigned int line_number);
 int add(void);
 void fnop(stack_t **head, unsigned int line_number);
+void fsub(stack_t **head, unsigned int line_number);
+int sub(void);
 
 
 
