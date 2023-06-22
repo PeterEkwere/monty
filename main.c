@@ -10,11 +10,6 @@ int main(int argc, char **argv)
 	int line_num = 1;
 	stack_t *top = NULL;
 
-	if (argv[1] == NULL)
-	{
-		fprintf(stderr, "Error: argv is NULL\n");
-		exit(EXIT_FAILURE);
-	}
 	ptr = malloc(sizeof(int));
 	if (ptr == NULL)
 	{
