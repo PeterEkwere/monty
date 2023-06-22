@@ -83,5 +83,9 @@ void fsub(stack_t **head, unsigned int line_number);
 int sub(void);
 void fmul(stack_t **head, unsigned int line_number);
 int multiply(void);
+void fmodular(stack_t **head, unsigned int line_number);
+int modular(void);
+
+
 
 #endif

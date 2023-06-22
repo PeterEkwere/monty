@@ -24,6 +24,7 @@ void handle_command(char *command, int line_number)
 		{"div", fdiv},
 		{"sub", fsub},
 		{"mul", fmul},
+		{"mod", fmodular},
 		{NULL, NULL}
 	};
 
@@ -35,5 +36,10 @@ void handle_command(char *command, int line_number)
 			break;
 		}
 		index++;
+	}
+	if (instruction[index].opcode == NULL)
+	{
+		fprintf(stderr, "L%i: unknown instruction %s\n", line_number, command);
+		exit(EXIT_FAILURE);
 	}
 }
