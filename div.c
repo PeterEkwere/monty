@@ -31,7 +31,6 @@ int divide(void)
 
 	if (top == NULL || top->next == NULL)
 	{
-		printf("returning -1\n");
 		return (-1);
 	}
 	else if (first_item->n == 0)

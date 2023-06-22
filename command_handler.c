@@ -23,6 +23,7 @@ void handle_command(char *command, int line_number)
 		{"nop", fnop},
 		{"div", fdiv},
 		{"sub", fsub},
+		{"mul", fmul},
 		{NULL, NULL}
 	};
 

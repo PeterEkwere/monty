@@ -81,5 +81,7 @@ void fdiv(stack_t **head, unsigned int line_number);
 int divide(void);
 void fsub(stack_t **head, unsigned int line_number);
 int sub(void);
+void fmul(stack_t **head, unsigned int line_number);
+int multiply(void);
 
 #endif

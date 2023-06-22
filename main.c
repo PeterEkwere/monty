@@ -8,15 +8,25 @@
 int main(int argc, char **argv)
 {
 	int line_num = 1;
+	stack_t *top = NULL;
 
+	if (argv[1] == NULL)
+	{
+		fprintf(stderr, "Error: argv is NULL\n");
+		exit(EXIT_FAILURE);
+	}
 	ptr = malloc(sizeof(int));
-
-	file = fopen(argv[1], "r");
+	if (ptr == NULL)
+	{
+		fprintf(stderr, "ptr is NULL\n");
+		exit(EXIT_FAILURE);
+	}
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
+	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
