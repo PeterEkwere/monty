@@ -21,6 +21,8 @@ void handle_command(char *command, int line_number)
 		{"swap", fswap},
 		{"add", fadd},
 		{"nop", fnop},
+		{"div", fdiv},
+		{"sub", fsub},
 		{NULL, NULL}
 	};
 

@@ -57,7 +57,7 @@ extern int value;
 extern int line_number;
 FILE *file;
 int *ptr;
-
+int *line_num_ptr;
 
 
 /** FUNCTIONS **/
@@ -77,7 +77,9 @@ int swap(void);
 void fadd(stack_t **head, unsigned int line_number);
 int add(void);
 void fnop(stack_t **head, unsigned int line_number);
-
-
+void fdiv(stack_t **head, unsigned int line_number);
+int divide(void);
+void fsub(stack_t **head, unsigned int line_number);
+int sub(void);
 
 #endif

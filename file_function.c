@@ -12,6 +12,7 @@ int file_function(int argc, FILE *file, int line_number)
 	char line[MAX_LENGTH];
 	char command[MAX_LENGTH];
 
+	line_num_ptr = &line_number;
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
