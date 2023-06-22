@@ -26,11 +26,11 @@ int file_function(int argc, FILE *file, int line_number)
 
 		if (strcmp(line, "") == 0)
 			continue;
+		if (line[0] == '#')
+			continue;
 		token = strtok(line, " ");
 		if (token != NULL)
 		{
-			if (strcmp(token, "#") == 0)
-				continue;
 			strcpy(command, token);
 			token = strtok(NULL, " ");
 			if (token != NULL)
